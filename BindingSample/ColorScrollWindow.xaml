@@ -3,11 +3,12 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:Solitas"
+        xmlns:src="clr-namespace:Solitas"
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
     <Window.Resources>
-        <local:DoubleToByteConverter x:Key="ConvDoubleToByte"/>
+        <src:DoubleToByteConverter x:Key="ConvDoubleToByte"/>
+        <src:RgbToColorConverter x:Key="ConvRgbToColor"/>
     </Window.Resources>
     <Grid>
         <Grid.ColumnDefinitions>
@@ -62,7 +63,13 @@
         </Grid>
         <GridSplitter Grid.Row="0" Grid.Column="1" Width="6" HorizontalAlignment="Center" VerticalAlignment="Stretch"/>
         <Border Grid.Row="0" Grid.Column="2">
-
+            <Border.Background>
+                <MultiBinding Converter="{StaticResource ConvRgbToColor}">
+                    <Binding ElementName="SrcRed" Path="Value" Mode="OneWay" Converter="{StaticResource ConvDoubleToByte}"/>
+                    <Binding ElementName="SrcGreen" Path="Value" Mode="OneWay"/>
+                    <Binding ElementName="SrcBlue" Path="Value" Mode="OneWay"/>
+                </MultiBinding>
+            </Border.Background>
         </Border>
     </Grid>
 </Window>
