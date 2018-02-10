@@ -1,0 +1,19 @@
+﻿<Window x:Class="Solitas.DigitalClockWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Solitas"
+        mc:Ignorable="d"
+        FontFamily="Bookman Ol Style"
+        FontSize="36pt"
+        ResizeMode="CanMinimize"
+        SizeToContent="WidthAndHeight"
+        Title="DigitalClockWindow">
+    <Window.Resources>
+        <local:ClockTicker1 x:Key="Clock"/>
+    </Window.Resources>
+    <Window.Content>
+        <Binding Source="{StaticResource Clock}" Path="DateTime"/>
+    </Window.Content>
+</Window>
