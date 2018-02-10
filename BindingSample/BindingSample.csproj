@@ -56,6 +56,9 @@
     <Compile Include="BindToTextBox.xaml.cs">
       <DependentUpon>BindToTextBox.xaml</DependentUpon>
     </Compile>
+    <Compile Include="DaysOfWeek.xaml.cs">
+      <DependentUpon>DaysOfWeek.xaml</DependentUpon>
+    </Compile>
     <Compile Include="RgbToColorConverter.cs" />
     <Page Include="BindToTextBox.xaml">
       <SubType>Designer</SubType>
@@ -74,6 +77,10 @@
       <DependentUpon>ColorScrollWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="DaysOfWeek.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
