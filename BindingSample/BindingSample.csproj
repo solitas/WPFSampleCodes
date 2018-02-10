@@ -57,12 +57,18 @@
       <DependentUpon>BindToTextBox.xaml</DependentUpon>
     </Compile>
     <Compile Include="ClockTicker1.cs" />
+    <Compile Include="ClockTicker2.cs" />
     <Compile Include="DaysOfWeek.xaml.cs">
       <DependentUpon>DaysOfWeek.xaml</DependentUpon>
     </Compile>
     <Compile Include="DigitalClockWindow.xaml.cs">
       <DependentUpon>DigitalClockWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="FormattedDigitalClockWindow.xaml.cs">
+      <DependentUpon>FormattedDigitalClockWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormattedTextConverter.cs" />
+    <Compile Include="Properties\Annotations.cs" />
     <Compile Include="RgbToColorConverter.cs" />
     <Page Include="BindToTextBox.xaml">
       <SubType>Designer</SubType>
@@ -86,6 +92,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="DigitalClockWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="FormattedDigitalClockWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
