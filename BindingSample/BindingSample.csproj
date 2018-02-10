@@ -53,7 +53,14 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="BindToTextBox.xaml.cs">
+      <DependentUpon>BindToTextBox.xaml</DependentUpon>
+    </Compile>
     <Compile Include="RgbToColorConverter.cs" />
+    <Page Include="BindToTextBox.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="ColorScrollWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
